@@ -107,7 +107,7 @@ fileNames["Ligation cleanup 1"] = "illumina_spri.pro";
 fileNames["Ligation cleanup 2"] = "illumina_spri.pro";
 fileNames["Library prep"] = "truseq_nano.rst";
 fileNames["Ligation cleanup"] = "truseq_nano_cleanup.rst";
-fileNames["qPCR setup"] = "qpcr-384_setup_ver2.pro";
+fileNames["qPCR setup"] = "qpcr-384_setup_ver3.pro";
 fileNames["PCR setup"] = "truseq_nano_pcr.pro";
 fileNames["PCR cleanup"] = "illumina_spri.pro";
 
