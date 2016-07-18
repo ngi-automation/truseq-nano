@@ -27,7 +27,7 @@ This document describes how to set up the automated TruSeq Nano protocol for the
 ```
 illumina_double-spri.pro
 illumina_spri.pro
-qpcr-384_setup_ver3.pro
+qpcr-384_setup_ver4.pro
 truseq_nano.VWForm
 truseq_nano.js
 truseq_nano.rst

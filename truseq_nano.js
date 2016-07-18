@@ -107,7 +107,7 @@ fileNames["Ligation cleanup 1"] = "illumina_spri.pro";
 fileNames["Ligation cleanup 2"] = "illumina_spri.pro";
 fileNames["Library prep"] = "truseq_nano.rst";
 fileNames["Ligation cleanup"] = "truseq_nano_cleanup.rst";
-fileNames["qPCR setup"] = "qpcr-384_setup_ver3.pro";
+fileNames["qPCR setup"] = "qpcr-384_setup_ver4.pro";
 fileNames["PCR setup"] = "truseq_nano_pcr.pro";
 fileNames["PCR cleanup"] = "illumina_spri.pro";
 
@@ -133,6 +133,7 @@ if(formProtocol === "Library prep") {
 }
 
 function updateSettings(protocol) {
+	settings = {};
 	if(protocol in presets) {
 		for(var s in presets[protocol]) {
 			settings[s] = presets[protocol][s];
@@ -146,4 +147,15 @@ function updateSettings(protocol) {
 var runsetIndex = 0;
 function updateRunset() {
 	updateSettings(runsetOrder[runsetIndex++]);
+}
+
+// Dynamic Pipetting Height 2.0:
+function dph(vol, endHeight) {
+	var v = parseFloat(vol);
+	var e = parseFloat(endHeight);
+	if(v > 0 && e > 0 && !isNaN(v+e)) {
+		return 0.078 - 9.501E-5*v + (0.734-e)/v;
+	} else {
+		throw "ValueException";
+	}
 }
